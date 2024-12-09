@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.API.Catalogo\\NSE.API.Catalogo.csproj": {}
+    "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.Api.Catalogo\\NSE.API.Catalogo.csproj": {}
   },
   "projects": {
     "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\buildingblocks\\NSE.Core\\NSE.Core.csproj": {
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.API.Catalogo\\NSE.API.Catalogo.csproj": {
+    "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.Api.Catalogo\\NSE.API.Catalogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.API.Catalogo\\NSE.API.Catalogo.csproj",
+        "projectUniqueName": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.Api.Catalogo\\NSE.API.Catalogo.csproj",
         "projectName": "NSE.API.Catalogo",
-        "projectPath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.API.Catalogo\\NSE.API.Catalogo.csproj",
+        "projectPath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.Api.Catalogo\\NSE.API.Catalogo.csproj",
         "packagesPath": "C:\\Users\\dev_estagio\\.nuget\\packages\\",
-        "outputPath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.API.Catalogo\\obj\\",
+        "outputPath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.Api.Catalogo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dev_estagio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,9 +90,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\building blocks\\NSE.Core\\NSE.Core.csproj": {
-                "projectPath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\building blocks\\NSE.Core\\NSE.Core.csproj"
-              },
               "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\buildingblocks\\NSE.Core\\NSE.Core.csproj": {
                 "projectPath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\buildingblocks\\NSE.Core\\NSE.Core.csproj"
               }
