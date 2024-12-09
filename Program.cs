@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using NSE.API.Catalogo.Data;
+using NSE.API.Catalogo.Data.Repository;
+using NSE.API.Catalogo.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +12,10 @@ builder.Services.AddDbContext<CatalogoContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddScoped<CatalogoContext>();
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
