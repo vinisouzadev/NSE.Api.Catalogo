@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NSE.API.Catalogo.Models;
+using NSE.Core.Data;
 
 namespace NSE.API.Catalogo.Data.Repository
 {
@@ -11,6 +12,8 @@ namespace NSE.API.Catalogo.Data.Repository
         {
             _context = context;
         }
+
+        public IUnityOfWork UnityOfWork => _context;
 
         public void Adicionar(Produto produto)
         {
