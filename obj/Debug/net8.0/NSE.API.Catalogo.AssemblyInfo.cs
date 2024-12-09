@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NSE.API.Catalogo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5cc681b0e1ed252f5acbca62d7783f1d475323f")]
 [assembly: System.Reflection.AssemblyProductAttribute("NSE.API.Catalogo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NSE.API.Catalogo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
