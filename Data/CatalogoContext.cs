@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NSE.API.Catalogo.Models;
+using NSE.Core.Data;
 
 namespace NSE.API.Catalogo.Data
 {
-    public class CatalogoContext : DbContext
+    public class CatalogoContext : DbContext, IUnityOfWork
     {
         public CatalogoContext(DbContextOptions<CatalogoContext> options) : base(options) { }
 
@@ -17,6 +18,11 @@ namespace NSE.API.Catalogo.Data
             }
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogoContext).Assembly);
+        }
+
+        public async Task<bool> Commit()
+        {
+            return await base.SaveChangesAsync() > 0;
         }
     }
 }
