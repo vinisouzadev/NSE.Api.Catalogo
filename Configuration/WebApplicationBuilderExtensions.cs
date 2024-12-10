@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NSE.API.Catalogo.Data;
+using NSE.API.Catalogo.Data.Repository;
+using NSE.API.Catalogo.Models;
 using System.Net.NetworkInformation;
 
 namespace NSE.API.Catalogo.Configuration
@@ -23,6 +25,14 @@ namespace NSE.API.Catalogo.Configuration
                     });
                 });
             });
+
+            return builder;
+        }
+
+        public static WebApplicationBuilder AddDependencyInjection(this WebApplicationBuilder builder) 
+        {
+            builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            builder.Services.AddScoped<CatalogoContext>();
 
             return builder;
         }
