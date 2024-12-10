@@ -2,7 +2,7 @@
 using NSE.API.Catalogo.Data;
 using NSE.API.Catalogo.Data.Repository;
 using NSE.API.Catalogo.Models;
-using System.Net.NetworkInformation;
+using Microsoft.OpenApi.Models;
 
 namespace NSE.API.Catalogo.Configuration
 {
@@ -33,6 +33,22 @@ namespace NSE.API.Catalogo.Configuration
         {
             builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
             builder.Services.AddScoped<CatalogoContext>();
+
+            return builder;
+        }
+
+        public static WebApplicationBuilder AddSwagger(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo()
+                {
+                    Title = "NerdStore Enterprise Catálogo API",
+                    Description = "Esta API irá retornar os produtos cadastrados no e-commerce NerdStore Enterprise",
+                    Contact = new OpenApiContact() { Name = "Vinícius Souza", Email = "viniciusouza.dev@gmail.com"},
+                    License = new OpenApiLicense() { Name = "MIT"}
+                });
+            });
 
             return builder;
         }
