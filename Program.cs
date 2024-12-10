@@ -1,10 +1,12 @@
 using NSE.API.Catalogo.Configuration;
+using NSE.WebApi.Core.Identidade;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder
     .AddApiConfiguration()
     .AddDependencyInjection();
+builder.AddJwtConfiguration();
 builder.Services.AddEndpointsApiExplorer();
 builder.AddSwagger();
 
@@ -18,7 +20,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseRouting();
+
+app.UseCors("Total");
+
+app.UseAuthConfiguration();
 
 app.MapControllers();
 
