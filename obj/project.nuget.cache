@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OebTm9k1e5g=",
+  "dgSpecHash": "uXeQsgow/lE=",
   "success": true,
-  "projectFilePath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.Api.Catalogo\\NSE.API.Catalogo.csproj",
+  "projectFilePath": "C:\\Estagio\\.NET\\NerdStoreEnterprise\\NerdStoreEnterprise\\src\\services\\Catalogo\\NSE.API.Catalogo\\NSE.API.Catalogo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dev_estagio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dev_estagio\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
