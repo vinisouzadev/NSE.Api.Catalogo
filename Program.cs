@@ -3,10 +3,10 @@ using NSE.WebApi.Core.Identidade;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder
-    .AddApiConfiguration()
-    .AddDependencyInjection();
+builder.AddApiConfiguration();
 builder.AddJwtConfiguration();
+builder.AddDependencyInjection();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.AddSwagger();
 

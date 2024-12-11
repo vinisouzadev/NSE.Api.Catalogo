@@ -10,22 +10,26 @@ namespace NSE.API.Catalogo.Configuration
     {
         public static WebApplicationBuilder AddApiConfiguration(this WebApplicationBuilder builder) 
         {
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+
             builder.Services.AddDbContext<CatalogoContext>(options =>
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 
-                builder.Services.AddCors(options =>
-                {
-                    options.AddPolicy("Total", builder =>
-                    {
-                        builder
-                        .AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
-                    });
-                });
             });
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("Total", builder =>
+                {
+                    builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+                });
+            });
+      
             return builder;
         }
 
@@ -47,6 +51,31 @@ namespace NSE.API.Catalogo.Configuration
                     Description = "Esta API irá retornar os produtos cadastrados no e-commerce NerdStore Enterprise",
                     Contact = new OpenApiContact() { Name = "Vinícius Souza", Email = "viniciusouza.dev@gmail.com"},
                     License = new OpenApiLicense() { Name = "MIT"}
+                });
+
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                {
+                    Description = "Insira o token JWT desta maneira: Bearer {seu token}",
+                    Name = "Authorization",
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[]{}
+                    }
                 });
             });
 
